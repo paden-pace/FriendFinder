@@ -26,9 +26,9 @@ app.use(bodyParser.json({
   type: "application/vnd.api+json"
 }));
 
+var members = [];
 
 // app.get("./routing/htmlRoutes.js", homeRoute(req, res));
-
     app.get("/", function(req, res){
         res.sendFile(path.join(__dirname, "./app/public/home.html"));
     });
@@ -37,31 +37,38 @@ app.use(bodyParser.json({
         res.sendFile(path.join(__dirname, "./app/public/survey.html"));
     });
 
-// app.get("/:option/:value1/:value2", function(req, res) {
- 
-//     var operator = req.params.option;
-//     var val1 = parseInt(req.params.value1);
-//     var val2 = parseInt(req.params.value2);
-//     console.log("operator");
 
-//     if (operator == "add"){
-//         console.log("answer");
-//         var answer = (val1 + val2);
-//         console.log(answer);
-//     } else if (operator == "subtract"){
-//         var answer = (val1 - val2);
-//         console.log(answer);
-//     }else if (operator == "multiply"){
-//         var answer = (val1 * val2);
-//         console.log(answer);
-//     }else if (operator == "divide"){
-//         var answer = (val1 / val2);
-//         console.log(answer);
-//     };
+app.get("/api/:members?", function(req, res) {
+  var chosen = req.params.members;
 
-//     res.send("helloo?");
+  if (chosen) {
+    console.log(chosen);
 
-// });
+    for (var i = 0; i < members.length; i++) {
+      if (chosen === members[i].routeName) {
+        return res.json(members[i]);
+      }
+    }
+    return res.json(false);
+  }
+  return res.json(members);
+});
+
+
+    // Create New Reservation - takes in JSON input
+app.post("/api/new", function(req, res) {
+  // req.body hosts is equal to the JSON post sent from the user
+    var newMember = req.body;
+    newMember.routeName = newMember.name.replace(/\s+/g, "").toLowerCase();
+    console.log(newMember);
+  // We then add the json the user sent to the member array
+    members.push(newMember);
+    newMember.conirmation = 'confirm member';
+  // We then display the JSON to the users
+    res.json(newMember);
+});
+
+
 
 
 

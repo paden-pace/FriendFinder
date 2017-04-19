@@ -5,6 +5,9 @@
 		<title>Friend Survey</title>
 		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="style.css">
+		
+		<!-- JQuery Link -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 	</head>
 
@@ -22,92 +25,147 @@
 					<div class="outside col-lg-12">
 						<div class="panel">
 							<form>
+								<div class="form-group">
+									<label for="name">Name (Required)</label>
+									<input type="text" class="form-control" id="name-select">
+								</div>
+								<div class="form-group">
+									<label for="name">Link to Photo Image (Required)</label>
+									<input type="text" class="form-control" id="photo-select">
+								</div>
 								<div class="row question-row question-row-1">
 									<h3 class="question question-1" id="question-1">1: Pinapple goes on pizza.</h3>
-									<input type="radio" name="pineapple" value="1"> 1
-									<input type="radio" name="pineapple" value="2"> 2
-									<input type="radio" name="pineapple" value="3"> 3
-									<input type="radio" name="pineapple" value="4"> 4
-									<input type="radio" name="pineapple" value="5"> 5
+									<select name="ans1" id="ans1-select">
+										<option value="1">1 (strongly disagree)</option>
+										<option value="2">2 (disagree)</option>
+										<option value="3">3 (neither agree or disagree)</option>
+										<option value="4">4 (agree)</option>
+										<option value="5">5 (strongly agree)</option>
+									</select>
 								</div>
 								<div class="row question-row question-row-2">
 									<h3 class="question question-2" id="question-2">2: Chips go on the sandwhich rather than on the side.</h3>
-									<input type="radio" name="chips" value="1"> 1
-									<input type="radio" name="chips" value="2"> 2
-									<input type="radio" name="chips" value="3"> 3
-									<input type="radio" name="chips" value="4"> 4
-									<input type="radio" name="chips" value="5"> 5
+									<select name="ans2" id="ans2-select">
+										<option value="1">1 (strongly disagree)</option>
+										<option value="2">2 (disagree)</option>
+										<option value="3">3 (neither agree or disagree)</option>
+										<option value="4">4 (agree)</option>
+										<option value="5">5 (strongly agree)</option>
+									</select>
 								</div>
 								<div class="row question-row question-row-3">
 									<h3 class="question question-3" id="question-3">3: When making cereal the milk goes in the bowl first.</h3>
-									<input type="radio" name="cereal" value="1"> 1
-									<input type="radio" name="cereal" value="2"> 2
-									<input type="radio" name="cereal" value="3"> 3
-									<input type="radio" name="cereal" value="4"> 4
-									<input type="radio" name="cereal" value="5"> 5
+									<select name="ans3" id="ans3-select">
+										<option value="1">1 (strongly disagree)</option>
+										<option value="2">2 (disagree)</option>
+										<option value="3">3 (neither agree or disagree)</option>
+										<option value="4">4 (agree)</option>
+										<option value="5">5 (strongly agree)</option>
+									</select>
 								</div>
 								<div class="row question-row question-row-4">
 									<h3 class="question question-4" id="question-4">4: Pepperoni is the best pizza topping.</h3>
-									<input type="radio" name="pepperoni" value="1"> 1
-									<input type="radio" name="pepperoni" value="2"> 2
-									<input type="radio" name="pepperoni" value="3"> 3
-									<input type="radio" name="pepperoni" value="4"> 4
-									<input type="radio" name="pepperoni" value="5"> 5
+									<select name="ans4" id="ans4-select">
+										<option value="1">1 (strongly disagree)</option>
+										<option value="2">2 (disagree)</option>
+										<option value="3">3 (neither agree or disagree)</option>
+										<option value="4">4 (agree)</option>
+										<option value="5">5 (strongly agree)</option>
+									</select>
 								</div>
 								<div class="row question-row question-row-5">
-									<h3 class="question question-5" id="question-5">5: Iced coffee is better than hot coffee</h3>
-									<input type="radio" name="coffee" value="1"> 1
-									<input type="radio" name="coffee" value="2"> 2
-									<input type="radio" name="coffee" value="3"> 3
-									<input type="radio" name="coffee" value="4"> 4
-									<input type="radio" name="coffee" value="5"> 5
+									<h3 class="question question-5" id="question-5">5: Iced coffee is better than hot coffee.</h3>
+									<select name="ans5" id="ans5-select">
+										<option value="1">1 (strongly disagree)</option>
+										<option value="2">2 (disagree)</option>
+										<option value="3">3 (neither agree or disagree)</option>
+										<option value="4">4 (agree)</option>
+										<option value="5">5 (strongly agree)</option>
+									</select>
 								</div>
 								<div class="row question-row question-row-6">
-									<h3 class="question question-6" id="question-6">6: How do you feel about this thing?</h3>
-									<input type="radio" name="ans-6" value="1"> 1
-									<input type="radio" name="ans-6" value="2"> 2
-									<input type="radio" name="ans-6" value="3"> 3
-									<input type="radio" name="ans-6" value="4"> 4
-									<input type="radio" name="ans-6" value="5"> 5
+									<h3 class="question question-6" id="question-6">6: Breakfast tacos are better than breakfast sandwhiches.</h3>
+									<select name="ans6" id="ans6-select">
+										<option value="1">1 (strongly disagree)</option>
+										<option value="2">2 (disagree)</option>
+										<option value="3">3 (neither agree or disagree)</option>
+										<option value="4">4 (agree)</option>
+										<option value="5">5 (strongly agree)</option>
+									</select>
 								</div>
 								<div class="row question-row question-row-7">
-									<h3 class="question question-7" id="question-7">7: How do you feel about this thing?</h3>
-									<input type="radio" name="ans-7" value="1"> 1
-									<input type="radio" name="ans-7" value="2"> 2
-									<input type="radio" name="ans-7" value="3"> 3
-									<input type="radio" name="ans-7" value="4"> 4
-									<input type="radio" name="ans-7" value="5"> 5
+									<h3 class="question question-7" id="question-7">7: BBQ Sauce is a viable pizza sauce.</h3>
+									<select name="ans7" id="ans7-select">
+										<option value="1">1 (strongly disagree)</option>
+										<option value="2">2 (disagree)</option>
+										<option value="3">3 (neither agree or disagree)</option>
+										<option value="4">4 (agree)</option>
+										<option value="5">5 (strongly agree)</option>
+									</select>
 								</div>
 								<div class="row question-row question-row-8">
-									<h3 class="question question-8" id="question-8">8: How do you feel about this thing?</h3>
-									<input type="radio" name="ans-8" value="1"> 1
-									<input type="radio" name="ans-8" value="2"> 2
-									<input type="radio" name="ans-8" value="3"> 3
-									<input type="radio" name="ans-8" value="4"> 4
-									<input type="radio" name="ans-8" value="5"> 5
+									<h3 class="question question-8" id="question-8">8: Mustard is better than mayonnaise on sandwhiches.</h3>
+									<select name="ans8" id="ans8-select">
+										<option value="1">1 (strongly disagree)</option>
+										<option value="2">2 (disagree)</option>
+										<option value="3">3 (neither agree or disagree)</option>
+										<option value="4">4 (agree)</option>
+										<option value="5">5 (strongly agree)</option>
+									</select>
 								</div>
 								<div class="row question-row question-row-9">
-									<h3 class="question question-9" id="question-9">9: How do you feel about this thing?</h3>
-									<input type="radio" name="ans-9" value="1"> 1
-									<input type="radio" name="ans-9" value="2"> 2
-									<input type="radio" name="ans-9" value="3"> 3
-									<input type="radio" name="ans-9" value="4"> 4
-									<input type="radio" name="ans-9" value="5"> 5
+									<h3 class="question question-9" id="question-9">9: The best sauce for corndogs is a combination of mustard and ketchup.</h3>
+									<select name="ans9" id="ans9-select">
+										<option value="1">1 (strongly disagree)</option>
+										<option value="2">2 (disagree)</option>
+										<option value="3">3 (neither agree or disagree)</option>
+										<option value="4">4 (agree)</option>
+										<option value="5">5 (strongly agree)</option>
+									</select>
 								</div>
 								<div class="row question-row question-row-10">
-									<h3 class="question question-10" id="question-10">10: How do you feel about this thing?</h3>
-									<input type="radio" name="ans-10" value="1"> 1
-									<input type="radio" name="ans-10" value="2"> 2
-									<input type="radio" name="ans-10" value="3"> 3
-									<input type="radio" name="ans-10" value="4"> 4
-									<input type="radio" name="ans-10" value="5"> 5
+									<h3 class="question question-10" id="question-10">10: Food is awesome, except for brussel sprouts.</h3>
+									<select name="ans10" id="ans10-select">
+										<option value="1">1 (strongly disagree)</option>
+										<option value="2">2 (disagree)</option>
+										<option value="3">3 (neither agree or disagree)</option>
+										<option value="4">4 (agree)</option>
+										<option value="5">5 (strongly agree)</option>
+									</select>
 								</div>
 							</form>
-							<button>Submit</button>
+							 <button type="submit" class="btn btn-primary btn-md" id="submit-btn">Submit</button>
 						</div>
 					</div>
 				</div>
 			</div>
+			<script type="text/javascript">
+    // Question: What does this code do?
+    $("#submit-btn").on("click", function(event) {
+      event.preventDefault();
+      var newMember = {
+        name: $("#name-select").val().trim(),
+        photo: $("#photo-select").val().trim(),
+        ans1: $("#ans1-select").val().trim(),
+		ans2: $("#ans2-select").val().trim(),
+		ans3: $("#ans3-select").val().trim(),
+		ans4: $("#ans4-select").val().trim(),
+		ans5: $("#ans5-select").val().trim(),
+		ans6: $("#ans6-select").val().trim(),
+		ans7: $("#ans7-select").val().trim(),
+		ans8: $("#ans8-select").val().trim(),
+		ans9: $("#ans9-select").val().trim(),
+		ans10: $("#ans10-select").val().trim()
+      };
+
+    //Question: What does this code do??
+      $.post("/api/new", newMember)
+      .done(function(data) {
+        console.log(data);
+        alert("Your membership has been added.");
+      });
+    });
+  </script>
 		</div>
 	</body>
 
