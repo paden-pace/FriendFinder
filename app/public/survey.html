@@ -3,75 +3,111 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Friend Survey</title>
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
 
 	</head>
 
 	<body>
-		<div class="header">
-			<nav class="navbar navbar-default">
-			  <div class="container-fluid">
-			    <div class="navbar-header">
-			      <a class="navbar-brand" id="navbar-brand" href="index.html">Paden Pace</a>
-			    </div>
-			      <ul class="nav navbar-nav navbar-right">
-			        <li class="nav-tab"><a href="index.html">About</a></li>
-			        <li class="nav-tab"><a href="portfolio.html">Portfolio</a></li>
-			        <li class="nav-tab"><a href="blog.html">Blog</a></li>
-			        <li class="nav-tab"><a href="contact.html">Contact</a></li>
-			      </ul>
-			  </div>
-			</nav>
-		</div>
-
 		<div class="body">
 			<div class="container">
 				<div class="row">
-					<div class="outside col-lg-8">
-						<div class="main main-about panel">
-							<div class="row">
-								<h2 class="main-title">About Me</h2>
-							</div>
-							<div class="row">
-								<div class="row profile">
-									<img src="assets/images/paden-profile.jpg" alt="paden-profile" class="profile-img"/>
-								</div>
-								<div row>
-									<p>I graduated the University of Texas with a BA in Government, two certificates in "Business Foundations" and "Conflict Resolution and Peace Studies". In addition to being a certified mediator and a two-time world champion Quidditch player, I am also completing the UT Coding Bootcamp to further my career in the world of software development.</p> 	
-									<p>While I have many interests including acrylic painting, country-western dancing, and fantasy football, I hope you will take the time to explore my portfolio and contact me with any inquiries, comments, or questions.</p>
-								</div>
-							</div>
-						</div>
+					<div class="col-lg-12'">
+						<h1>Food Freind Finder</h1>
+						<h2>Survey Instructions: </h2>
+						<h4>Please fill out the following questionaire with 1 being strongly disagree and 5 being strongly agree.</h4>
 					</div>
-
-					<div class="outside col-lg-4">
-						<div class="sidebar panel">
-							<div class="row">
-								<h3 class="connect-title">Connect With Me</h3>
-							</div>
-							<div class="row">
-								<div class="col-lg-4">
-									<a href="https://github.com/paden-pace" target="_blank" >
-										<img src="assets/images/github-square.png" alt="github-square" class="social-link" width="50px" height="50px" />
-									</a>
+				</div>
+				<div class="row">
+					<div class="outside col-lg-12">
+						<div class="panel">
+							<form>
+								<div class="row question-row question-row-1">
+									<h3 class="question question-1" id="question-1">1: Pinapple goes on pizza.</h3>
+									<input type="radio" name="pineapple" value="1"> 1
+									<input type="radio" name="pineapple" value="2"> 2
+									<input type="radio" name="pineapple" value="3"> 3
+									<input type="radio" name="pineapple" value="4"> 4
+									<input type="radio" name="pineapple" value="5"> 5
 								</div>
-								<div class="col-lg-4">
-									<a href="https://www.linkedin.com/in/paden-pace-510949a1?" target="_blank">
-										<img src="assets/images/linkedin-square.png" alt="linkedin-square" class="social-link" width="50px" height="50px" />
-									</a>
+								<div class="row question-row question-row-2">
+									<h3 class="question question-2" id="question-2">2: Chips go on the sandwhich rather than on the side.</h3>
+									<input type="radio" name="chips" value="1"> 1
+									<input type="radio" name="chips" value="2"> 2
+									<input type="radio" name="chips" value="3"> 3
+									<input type="radio" name="chips" value="4"> 4
+									<input type="radio" name="chips" value="5"> 5
 								</div>
-								<div class="col-lg-4">	
-									<a href="http://stackoverflow.com/users/7196071/paden-pace" target="_blank">
-										<img src="assets/images/stackoverflow-square.png" alt="stackoverflow-square" class="social-link" width="50px" height="50px">
-									</a>
+								<div class="row question-row question-row-3">
+									<h3 class="question question-3" id="question-3">3: When making cereal the milk goes in the bowl first.</h3>
+									<input type="radio" name="cereal" value="1"> 1
+									<input type="radio" name="cereal" value="2"> 2
+									<input type="radio" name="cereal" value="3"> 3
+									<input type="radio" name="cereal" value="4"> 4
+									<input type="radio" name="cereal" value="5"> 5
 								</div>
-							</div>
+								<div class="row question-row question-row-4">
+									<h3 class="question question-4" id="question-4">4: Pepperoni is the best pizza topping.</h3>
+									<input type="radio" name="pepperoni" value="1"> 1
+									<input type="radio" name="pepperoni" value="2"> 2
+									<input type="radio" name="pepperoni" value="3"> 3
+									<input type="radio" name="pepperoni" value="4"> 4
+									<input type="radio" name="pepperoni" value="5"> 5
+								</div>
+								<div class="row question-row question-row-5">
+									<h3 class="question question-5" id="question-5">5: Iced coffee is better than hot coffee</h3>
+									<input type="radio" name="coffee" value="1"> 1
+									<input type="radio" name="coffee" value="2"> 2
+									<input type="radio" name="coffee" value="3"> 3
+									<input type="radio" name="coffee" value="4"> 4
+									<input type="radio" name="coffee" value="5"> 5
+								</div>
+								<div class="row question-row question-row-6">
+									<h3 class="question question-6" id="question-6">6: How do you feel about this thing?</h3>
+									<input type="radio" name="ans-6" value="1"> 1
+									<input type="radio" name="ans-6" value="2"> 2
+									<input type="radio" name="ans-6" value="3"> 3
+									<input type="radio" name="ans-6" value="4"> 4
+									<input type="radio" name="ans-6" value="5"> 5
+								</div>
+								<div class="row question-row question-row-7">
+									<h3 class="question question-7" id="question-7">7: How do you feel about this thing?</h3>
+									<input type="radio" name="ans-7" value="1"> 1
+									<input type="radio" name="ans-7" value="2"> 2
+									<input type="radio" name="ans-7" value="3"> 3
+									<input type="radio" name="ans-7" value="4"> 4
+									<input type="radio" name="ans-7" value="5"> 5
+								</div>
+								<div class="row question-row question-row-8">
+									<h3 class="question question-8" id="question-8">8: How do you feel about this thing?</h3>
+									<input type="radio" name="ans-8" value="1"> 1
+									<input type="radio" name="ans-8" value="2"> 2
+									<input type="radio" name="ans-8" value="3"> 3
+									<input type="radio" name="ans-8" value="4"> 4
+									<input type="radio" name="ans-8" value="5"> 5
+								</div>
+								<div class="row question-row question-row-9">
+									<h3 class="question question-9" id="question-9">9: How do you feel about this thing?</h3>
+									<input type="radio" name="ans-9" value="1"> 1
+									<input type="radio" name="ans-9" value="2"> 2
+									<input type="radio" name="ans-9" value="3"> 3
+									<input type="radio" name="ans-9" value="4"> 4
+									<input type="radio" name="ans-9" value="5"> 5
+								</div>
+								<div class="row question-row question-row-10">
+									<h3 class="question question-10" id="question-10">10: How do you feel about this thing?</h3>
+									<input type="radio" name="ans-10" value="1"> 1
+									<input type="radio" name="ans-10" value="2"> 2
+									<input type="radio" name="ans-10" value="3"> 3
+									<input type="radio" name="ans-10" value="4"> 4
+									<input type="radio" name="ans-10" value="5"> 5
+								</div>
+							</form>
+							<button>Submit</button>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="footer row">
-			<p class="col-lg-12" id="footer-text">&copy; Copyright 2016 Paden Pace</p>
 		</div>
 	</body>
 
