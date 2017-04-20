@@ -138,32 +138,54 @@
 						</div>
 					</div>
 				</div>
+				<div class="row">
+					<div class="bestFriendDiv" id="bestFriendDiv">
+				</div>
 			</div>
 			<script type="text/javascript">
     // Question: What does this code do?
     $("#submit-btn").on("click", function(event) {
+		var ans1 = $("#ans1-select").val().trim();
+		var ans2= $("#ans2-select").val().trim();
+		var ans3= $("#ans3-select").val().trim();
+		var ans4= $("#ans4-select").val().trim();
+		var ans5= $("#ans5-select").val().trim();
+		var ans6= $("#ans6-select").val().trim();
+		var ans7= $("#ans7-select").val().trim();
+		var ans8= $("#ans8-select").val().trim();
+		var ans9= $("#ans9-select").val().trim();
+		var ans10= $("#ans10-select").val().trim();
+		var ansArray = [ans1, ans2, ans3, ans4, ans5, ans6, ans7, ans8, ans9, ans10];
       event.preventDefault();
       var newMember = {
         name: $("#name-select").val().trim(),
         photo: $("#photo-select").val().trim(),
-        ans1: $("#ans1-select").val().trim(),
-		ans2: $("#ans2-select").val().trim(),
-		ans3: $("#ans3-select").val().trim(),
-		ans4: $("#ans4-select").val().trim(),
-		ans5: $("#ans5-select").val().trim(),
-		ans6: $("#ans6-select").val().trim(),
-		ans7: $("#ans7-select").val().trim(),
-		ans8: $("#ans8-select").val().trim(),
-		ans9: $("#ans9-select").val().trim(),
-		ans10: $("#ans10-select").val().trim()
+        answers: ansArray
       };
 
-    //Question: What does this code do??
+
+
       $.post("/api/new", newMember)
       .done(function(data) {
         console.log(data);
         alert("Your membership has been added.");
       });
+
+	//   $.get("/api", function(data) {
+    //   for (var i = 0; i < data.length; i++) {
+	// 	var orderNumber = i+1;
+    //     var wellSection = $("<div>");
+    //     wellSection.addClass("well");
+    //     wellSection.attr("id", "reserve-well-" + i);
+	// 	$("#tables").append(wellSection);
+	// 	$("#reserve-well-" + i).append("<h2> Order Number: " + orderNumber + "</h2>");
+	// 	$("#reserve-well-" + i).append("<h2> Name: " + data[i].name + "</h2>");
+	// 	$("#reserve-well-" + i).append("<h3>Unique Number: " + data[i].unique + "</h4>");
+	//   }
+    // });
+
+
+
     });
   </script>
 		</div>
