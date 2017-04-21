@@ -9,10 +9,49 @@
 		<!-- JQuery Link -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<style>
-			.bestFriendDiv {
+			.bestFriend {
 				border: solid 3px black;
 			}
 			.best_pic{
+				border: solid 3px black;
+			}
+			body{
+				background-image: url(https://2v1vjv2k5g2g3znsgc3q0thm-wpengine.netdna-ssl.com/wp-content/uploads/2016/03/mk-restaurant-dining-room-interior-brighter.jpg);
+				width:100%;
+				height:auto;
+				/*background-image: url(../images/wood-stain.jpg);*/
+				background-repeat:no-repeat;
+				background-position: 0 0 0 px;
+				-webkit-background-size:cover;
+				background-attachment: fixed; 
+			}
+			form{
+				padding: 10px;
+			}
+			.question-row{
+				padding: 5px 20px;
+			}
+			.select{
+				padding-left: 20px;
+			}
+			.panel{
+                border: solid 3px black;
+				background-color: #eeeeee;
+            }
+			.results{
+				padding: 20px 20px 20px 40px;
+			}
+			.jumbotron{
+				margin: 20px;
+				border: solid 3px black;
+			}
+			.apiOption{
+				background-color: #eeeeee;
+				color: black;
+				text-align: center;
+				float: right;
+				margin: 0 20px 20px 20px;
+				padding: 10px 10px 0 10px;
 				border: solid 3px black;
 
 			}
@@ -24,130 +63,158 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-12'">
-						<h1>Food Freind Finder</h1>
-						<h2>Survey Instructions: </h2>
-						<h4>Please fill out the following questionaire with 1 being strongly disagree and 5 being strongly agree.</h4>
-					</div>
-				</div>
-				<div class="row">
-					<div class="outside col-lg-12">
-						<div class="panel">
-							<form>
-								<div class="form-group">
-									<label for="name">Name (Required)</label>
-									<input type="text" class="form-control" id="name-select">
-								</div>
-								<div class="form-group">
-									<label for="name">Link to Photo Image (Required)</label>
-									<input type="text" class="form-control" id="photo-select">
-								</div>
-								<div class="row question-row question-row-1">
-									<h3 class="question question-1" id="question-1">1: Pinapple goes on pizza.</h3>
-									<select name="ans1" id="ans1-select">
-										<option value="1">1 (strongly disagree)</option>
-										<option value="2">2 (disagree)</option>
-										<option value="3">3 (neither agree or disagree)</option>
-										<option value="4">4 (agree)</option>
-										<option value="5">5 (strongly agree)</option>
-									</select>
-								</div>
-								<div class="row question-row question-row-2">
-									<h3 class="question question-2" id="question-2">2: Chips go on the sandwhich rather than on the side.</h3>
-									<select name="ans2" id="ans2-select">
-										<option value="1">1 (strongly disagree)</option>
-										<option value="2">2 (disagree)</option>
-										<option value="3">3 (neither agree or disagree)</option>
-										<option value="4">4 (agree)</option>
-										<option value="5">5 (strongly agree)</option>
-									</select>
-								</div>
-								<div class="row question-row question-row-3">
-									<h3 class="question question-3" id="question-3">3: When making cereal the milk goes in the bowl first.</h3>
-									<select name="ans3" id="ans3-select">
-										<option value="1">1 (strongly disagree)</option>
-										<option value="2">2 (disagree)</option>
-										<option value="3">3 (neither agree or disagree)</option>
-										<option value="4">4 (agree)</option>
-										<option value="5">5 (strongly agree)</option>
-									</select>
-								</div>
-								<div class="row question-row question-row-4">
-									<h3 class="question question-4" id="question-4">4: Pepperoni is the best pizza topping.</h3>
-									<select name="ans4" id="ans4-select">
-										<option value="1">1 (strongly disagree)</option>
-										<option value="2">2 (disagree)</option>
-										<option value="3">3 (neither agree or disagree)</option>
-										<option value="4">4 (agree)</option>
-										<option value="5">5 (strongly agree)</option>
-									</select>
-								</div>
-								<div class="row question-row question-row-5">
-									<h3 class="question question-5" id="question-5">5: Iced coffee is better than hot coffee.</h3>
-									<select name="ans5" id="ans5-select">
-										<option value="1">1 (strongly disagree)</option>
-										<option value="2">2 (disagree)</option>
-										<option value="3">3 (neither agree or disagree)</option>
-										<option value="4">4 (agree)</option>
-										<option value="5">5 (strongly agree)</option>
-									</select>
-								</div>
-								<div class="row question-row question-row-6">
-									<h3 class="question question-6" id="question-6">6: Breakfast tacos are better than breakfast sandwhiches.</h3>
-									<select name="ans6" id="ans6-select">
-										<option value="1">1 (strongly disagree)</option>
-										<option value="2">2 (disagree)</option>
-										<option value="3">3 (neither agree or disagree)</option>
-										<option value="4">4 (agree)</option>
-										<option value="5">5 (strongly agree)</option>
-									</select>
-								</div>
-								<div class="row question-row question-row-7">
-									<h3 class="question question-7" id="question-7">7: BBQ Sauce is a viable pizza sauce.</h3>
-									<select name="ans7" id="ans7-select">
-										<option value="1">1 (strongly disagree)</option>
-										<option value="2">2 (disagree)</option>
-										<option value="3">3 (neither agree or disagree)</option>
-										<option value="4">4 (agree)</option>
-										<option value="5">5 (strongly agree)</option>
-									</select>
-								</div>
-								<div class="row question-row question-row-8">
-									<h3 class="question question-8" id="question-8">8: Mustard is better than mayonnaise on sandwhiches.</h3>
-									<select name="ans8" id="ans8-select">
-										<option value="1">1 (strongly disagree)</option>
-										<option value="2">2 (disagree)</option>
-										<option value="3">3 (neither agree or disagree)</option>
-										<option value="4">4 (agree)</option>
-										<option value="5">5 (strongly agree)</option>
-									</select>
-								</div>
-								<div class="row question-row question-row-9">
-									<h3 class="question question-9" id="question-9">9: The best sauce for corndogs is a combination of mustard and ketchup.</h3>
-									<select name="ans9" id="ans9-select">
-										<option value="1">1 (strongly disagree)</option>
-										<option value="2">2 (disagree)</option>
-										<option value="3">3 (neither agree or disagree)</option>
-										<option value="4">4 (agree)</option>
-										<option value="5">5 (strongly agree)</option>
-									</select>
-								</div>
-								<div class="row question-row question-row-10">
-									<h3 class="question question-10" id="question-10">10: Food is awesome, except for brussel sprouts.</h3>
-									<select name="ans10" id="ans10-select">
-										<option value="1">1 (strongly disagree)</option>
-										<option value="2">2 (disagree)</option>
-										<option value="3">3 (neither agree or disagree)</option>
-										<option value="4">4 (agree)</option>
-										<option value="5">5 (strongly agree)</option>
-									</select>
-								</div>
-							</form>
-							 <button type="submit" class="btn btn-primary btn-md" id="submit-btn">Submit</button>
+						<div class="jumbotron text-center">
+							<div class="row">
+								<h1>Food Freind Finder</h1>
+							</div>
+							<div class="row">
+								<h2>Survey Instructions: </h2>
+								<h4>Please fill out the following questionaire with 1 being strongly disagree and 5 being strongly agree.</h4>
+							</div>
+							<div class="row">
+								<a href="./">
+									<button type="button" class="btn btn-default"><span  class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</button>
+								</a>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="row">
-					<div class="bestFriendDiv" id="bestFriendDiv">
+					<a class="apiOption" href="./api"><p>API Friends List</p></a>
+					<a class="apiOption" href="https://github.com/paden-pace/FriendFinder"><p>Git Hub Repo</p></a>
+				</div>
+				<div class="row">
+					<div class="outside col-lg-12">
+						<div class="panel">
+
+
+							<div class="panel-heading">
+								<h2>Survey</h2>
+							</div>
+							<div class="panel-body">
+								<div clas ="row panel-row">
+
+									<form>
+										<div class="form-group">
+											<label for="name">Name (Required)</label>
+											<input type="text" class="form-control" id="name-select" required>
+										</div>
+										<div class="form-group">
+											<label for="name">Link to Photo Image (Required)</label>
+											<input type="text" class="form-control" id="photo-select" required>
+										</div>
+										<div class="row question-row question-row-1">
+											<h3 class="question question-1" id="question-1">1: Pinapple goes on pizza.</h3>
+											<select name="ans1" id="ans1-select">
+												<option value="1">1 (strongly disagree)</option>
+												<option value="2">2 (disagree)</option>
+												<option value="3">3 (neither agree or disagree)</option>
+												<option value="4">4 (agree)</option>
+												<option value="5">5 (strongly agree)</option>
+											</select>
+										</div>
+										<div class="row question-row question-row-2">
+											<h3 class="question question-2" id="question-2">2: Chips go on the sandwhich rather than on the side.</h3>
+											<select name="ans2" id="ans2-select">
+												<option value="1">1 (strongly disagree)</option>
+												<option value="2">2 (disagree)</option>
+												<option value="3">3 (neither agree or disagree)</option>
+												<option value="4">4 (agree)</option>
+												<option value="5">5 (strongly agree)</option>
+											</select>
+										</div>
+										<div class="row question-row question-row-3">
+											<h3 class="question question-3" id="question-3">3: When making cereal the milk goes in the bowl first.</h3>
+											<select name="ans3" id="ans3-select">
+												<option value="1">1 (strongly disagree)</option>
+												<option value="2">2 (disagree)</option>
+												<option value="3">3 (neither agree or disagree)</option>
+												<option value="4">4 (agree)</option>
+												<option value="5">5 (strongly agree)</option>
+											</select>
+										</div>
+										<div class="row question-row question-row-4">
+											<h3 class="question question-4" id="question-4">4: Pepperoni is the best pizza topping.</h3>
+											<select name="ans4" id="ans4-select">
+												<option value="1">1 (strongly disagree)</option>
+												<option value="2">2 (disagree)</option>
+												<option value="3">3 (neither agree or disagree)</option>
+												<option value="4">4 (agree)</option>
+												<option value="5">5 (strongly agree)</option>
+											</select>
+										</div>
+										<div class="row question-row question-row-5">
+											<h3 class="question question-5" id="question-5">5: Iced coffee is better than hot coffee.</h3>
+											<select name="ans5" id="ans5-select">
+												<option value="1">1 (strongly disagree)</option>
+												<option value="2">2 (disagree)</option>
+												<option value="3">3 (neither agree or disagree)</option>
+												<option value="4">4 (agree)</option>
+												<option value="5">5 (strongly agree)</option>
+											</select>
+										</div>
+										<div class="row question-row question-row-6">
+											<h3 class="question question-6" id="question-6">6: Breakfast tacos are better than breakfast sandwhiches.</h3>
+											<select name="ans6" id="ans6-select">
+												<option value="1">1 (strongly disagree)</option>
+												<option value="2">2 (disagree)</option>
+												<option value="3">3 (neither agree or disagree)</option>
+												<option value="4">4 (agree)</option>
+												<option value="5">5 (strongly agree)</option>
+											</select>
+										</div>
+										<div class="row question-row question-row-7">
+											<h3 class="question question-7" id="question-7">7: BBQ Sauce is a viable pizza sauce.</h3>
+											<select name="ans7" id="ans7-select">
+												<option value="1">1 (strongly disagree)</option>
+												<option value="2">2 (disagree)</option>
+												<option value="3">3 (neither agree or disagree)</option>
+												<option value="4">4 (agree)</option>
+												<option value="5">5 (strongly agree)</option>
+											</select>
+										</div>
+										<div class="row question-row question-row-8">
+											<h3 class="question question-8" id="question-8">8: Mustard is better than mayonnaise on sandwhiches.</h3>
+											<select name="ans8" id="ans8-select">
+												<option value="1">1 (strongly disagree)</option>
+												<option value="2">2 (disagree)</option>
+												<option value="3">3 (neither agree or disagree)</option>
+												<option value="4">4 (agree)</option>
+												<option value="5">5 (strongly agree)</option>
+											</select>
+										</div>
+										<div class="row question-row question-row-9">
+											<h3 class="question question-9" id="question-9">9: The best sauce for corndogs is a combination of mustard and ketchup.</h3>
+											<select name="ans9" id="ans9-select">
+												<option value="1">1 (strongly disagree)</option>
+												<option value="2">2 (disagree)</option>
+												<option value="3">3 (neither agree or disagree)</option>
+												<option value="4">4 (agree)</option>
+												<option value="5">5 (strongly agree)</option>
+											</select>
+										</div>
+										<div class="row question-row question-row-10">
+											<h3 class="question question-10" id="question-10">10: Food is awesome, except for brussel sprouts.</h3>
+											<select name="ans10" id="ans10-select">
+												<option value="1">1 (strongly disagree)</option>
+												<option value="2">2 (disagree)</option>
+												<option value="3">3 (neither agree or disagree)</option>
+												<option value="4">4 (agree)</option>
+												<option value="5">5 (strongly agree)</option>
+											</select>
+										</div>
+									</form>
+									<button type="submit" class="btn btn-primary btn-md" id="submit-btn">Submit</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="bestFriendDiv" id="bestFriendDiv">
+						</div>
+					</div>
 				</div>
 			</div>
 			<script type="text/javascript">
@@ -188,10 +255,11 @@
 			for (i=0; i<(members.length-1); i++){
 				var results = 0;
 					for (k=0; k<members[i].answers.length; k++){
-						var check = parseInt(members[i].answers) - parseInt(newMember.answers[k]);
+						var check = parseInt(members[i].answers[k]) - parseInt(newMember.answers[k]);
 						console.log(check);
 						if (check > 0){
 							results = results + check;
+							//console.log("Results: "+results);
 						} else if (check < 0){
 							results = results - check;
 						};
@@ -207,8 +275,13 @@
 				} 
 				console.log ("least: " + least);
 			};
-			$("#bestFriendDiv").html("<h3>Best Friend: " + members[least].name + "</h3>");
-			$("#bestFriendDiv").append('<img src ="' + members[least].photo + '" alt="bestfriend-photo" class="best_pic">');
+			var friendSection = $("<div>");
+			friendSection.addClass("results");
+			friendSection.addClass("panel");
+			friendSection.attr("id", "bestFriend");
+			$("#bestFriendDiv").append(friendSection);
+			$("#bestFriend").html("<h3>Your New Best Food Friend: " + members[least].name + "</h3>");
+			$("#bestFriend").append('<img src ="' + members[least].photo + '" alt="bestfriend-photo" class="best_pic">');
 			//<img src="assets/images/paden-profile.jpg" alt="paden-profile" class="profile-img"/>
 	  });
 
