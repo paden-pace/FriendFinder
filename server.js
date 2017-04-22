@@ -9,7 +9,7 @@ var htmlRoutes = require('./app/routing/htmlRoutes');
 var apiRoutes = require('./app/routing/apiRoutes');
 var friendsJS = require('./app/data/friends');
 
-require("./app/routing/htmlRoutes");
+// require("./app/routing/htmlRoutes");
 
 
 
@@ -76,23 +76,6 @@ app.get("/api/friends", function(req, res) {
   }
   return res.json(members);
 });
-
-
-// app.get("/api", function(req, res) {
-//   var chosen = req.params.members;
-
-//   if (chosen) {
-//     console.log(chosen);
-
-//     for (var i = 0; i < members.length; i++) {
-//       if (chosen === members[i].routeName) {
-//         return res.json(members[i]);
-//       }
-//     }
-//     return res.json(false);
-//   }
-//   return res.json(members);
-// });
 
 
     // Create New Reservation - takes in JSON input
