@@ -7,20 +7,15 @@ var bodyParser = require("body-parser");
 var path = require("path");
 
 
-var homeRoute = function(app) {
+var htmlRoutes = function (app) {
+    console.log("getting call from htmlRoutes.js")
+    app.get("/survey", function(req, res) {
+        res.sendFile(path.join(__dirname, "./../public/survey.html"));
+    });
     app.get("/", function(req, res){
         res.sendFile(path.join(__dirname, "./../public/home.html"));
     });
 };
 
 
-var surveyRoute = function (req, res) {
-  res.sendFile(path.join(__dirname, "./../public/survey.html"));
-};
-
-// app.get("/survey", function(req, res) {
-//   res.sendFile(path.join(__dirname, "./../public/survey.html"));
-// });
-
-
-module.exports = homeRoute;
+module.exports = htmlRoutes;
