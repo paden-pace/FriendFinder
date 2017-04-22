@@ -8,7 +8,6 @@ var path = require("path");
 
 
 var htmlRoutes = function (app) {
-    console.log("getting call from htmlRoutes.js")
     app.get("/survey", function(req, res) {
         res.sendFile(path.join(__dirname, "./../public/survey.html"));
     });

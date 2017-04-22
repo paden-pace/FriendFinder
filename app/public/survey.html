@@ -259,15 +259,12 @@
 						console.log(check);
 						if (check > 0){
 							results = results + check;
-							//console.log("Results: "+results);
 						} else if (check < 0){
 							results = results - check;
 						};
 					};
 				console.log("Member "+ i + " has a result of " + results);
 				if (results < 40){
-					console.log("Results: "+results);
-					console.log("LeastResults: "+leastResults);
 					if (results < leastResults){
 						leastResults = results;
 						least = i;
@@ -282,26 +279,7 @@
 			$("#bestFriendDiv").html(friendSection);
 			$("#bestFriend").html("<h3>Your New Best Food Friend: " + members[least].name + "</h3>");
 			$("#bestFriend").append('<img src ="' + members[least].photo + '" alt="bestfriend-photo" class="best_pic">');
-			//<img src="assets/images/paden-profile.jpg" alt="paden-profile" class="profile-img"/>
 	  });
-
-
-
-	//   $.get("/api", function(data) {
-    //   for (var i = 0; i < data.length; i++) {
-	// 	var orderNumber = i+1;
-    //     var wellSection = $("<div>");
-    //     wellSection.addClass("well");
-    //     wellSection.attr("id", "reserve-well-" + i);
-	// 	$("#tables").append(wellSection);
-	// 	$("#reserve-well-" + i).append("<h2> Order Number: " + orderNumber + "</h2>");
-	// 	$("#reserve-well-" + i).append("<h2> Name: " + data[i].name + "</h2>");
-	// 	$("#reserve-well-" + i).append("<h3>Unique Number: " + data[i].unique + "</h4>");
-	//   }
-    // });
-
-
-
     });
   </script>
 		</div>
